@@ -7,15 +7,18 @@ import CartPage from "@modules/cart";
 import ProductDetailPage from "@components/product/ProductDetailPage";
 import ProfilePage from "../../components/User/ProfilePage";
 import CheckOutPage from "@modules/checkout";
-import Blog from "../blog/component/Blog";
-import BlogDetail from "../blog/component/BlogDetails";
+import Blog from "../blog/components/Blog";
+import BlogDetail from "../blog/components/BlogDetails";
+import Login from "../login/components/login";
+import Signup from "../login/components/Signup";
 
 function MainRoutes() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="login" element={<div>Login</div>} />
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<Signup/>}/>
           <Route path="/" element={<Wrapper />}>
             <Route index element={<HomePage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
